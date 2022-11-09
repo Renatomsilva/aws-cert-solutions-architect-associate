@@ -9,7 +9,7 @@ jobs:
     needs: call-workflow
     uses: ./.github/workflows/function2.yml    
   Explore-GitHub-Actions:
-    needs: call-workflow
+    needs: call-workflow2
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
