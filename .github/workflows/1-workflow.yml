@@ -4,7 +4,5 @@ on: [push]
 
 jobs:
   call-workflow:
-    needs: 
-      - function
     uses: ./.github/workflows/function.yml
 
