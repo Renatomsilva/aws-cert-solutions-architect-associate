@@ -5,7 +5,7 @@ jobs:
   Explore-GitHub-Actions:  
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/function
+    - uses: actions/function@main
      
     
     
