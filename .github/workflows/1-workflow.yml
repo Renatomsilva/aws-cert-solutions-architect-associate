@@ -3,9 +3,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:  
-    runs-on: ubuntu-latest    
-    steps:
-    - uses: Renatomsilva/aws-cert-solutions-architect-associate/.github/workflows/function.yml@main
-     
+    uses: Renatomsilva/aws-cert-solutions-architect-associate/.github/workflows/function.yml@main
+    with:
+      config-path: "aaaaa"
     
     
