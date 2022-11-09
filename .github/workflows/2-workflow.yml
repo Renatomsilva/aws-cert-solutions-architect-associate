@@ -5,6 +5,9 @@ on: [push]
 jobs:
   call-workflow:
     uses: ./.github/workflows/function.yml
+  call-workflow2:
+    needs: call-workflow
+    uses: ./.github/workflows/function2.yml    
   Explore-GitHub-Actions:
     needs: call-workflow
     runs-on: ubuntu-latest

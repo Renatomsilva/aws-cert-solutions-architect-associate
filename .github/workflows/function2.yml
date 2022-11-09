@@ -1,0 +1,10 @@
+name: Reusable workflow example
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_call:
+
+jobs:
+  function:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event 2. "
