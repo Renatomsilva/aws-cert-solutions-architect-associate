@@ -1,0 +1,7 @@
+name: Call a reusable workflow
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/function.yml
