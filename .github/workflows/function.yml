@@ -1,5 +1,5 @@
 name: Reusable workflow example
-
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_call:
 
