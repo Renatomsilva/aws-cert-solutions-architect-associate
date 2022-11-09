@@ -6,6 +6,6 @@ jobs:
   call-workflow:
     uses: Renatomsilva/aws-cert-solutions-architect-associate/.github/workflows/function.yml@v1
     with:
-      config-path: .github/labeler.yml
+      config-path: .github/function.yml
     secrets:
-      envPAT: ${{ secrets.envPAT }}
+      token: ${{ secrets.envPAT }}
