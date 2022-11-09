@@ -1,0 +1,5 @@
+jobs:
+  my_function:
+    name: my-function
+    steps:
+      - run: echo "This is a function"
