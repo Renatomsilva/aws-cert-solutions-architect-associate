@@ -24,6 +24,8 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Create-PR:
+    needs: Explore-GitHub-Actions
+    runs-on: ubuntu-latest
     steps:
       - name: Create PR
         uses: funivan/github-autopr@0.2
