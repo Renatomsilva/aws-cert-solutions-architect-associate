@@ -28,6 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          with:
+          token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
       - name: Update AUTHORS
         run: |
@@ -36,6 +38,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: update authors
+          token: ${{ secrets.GH_TOKEN }}
           title: Update AUTHORS
           body: Credit new contributors by updating AUTHORS
           branch: main
