@@ -1,6 +1,7 @@
 name: Call a reusable workflow
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+permissions: write-all
 
 jobs:
   call-workflow:
