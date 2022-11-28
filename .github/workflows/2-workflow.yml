@@ -1,6 +1,7 @@
 name: Call a reusable workflow
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+permissions: write-all
 
 jobs:
   call-workflow:
@@ -23,19 +24,17 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  updateAuthors:
+  productionPromotion:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-      - name: Update AUTHORS
+          ref: develop
+      - name: Reset promotion branch
         run: |
-          git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > AUTHORS
+          git fetch origin main:main
+          git reset --hard main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: update authors
-          title: Update AUTHORS
-          body: Credit new contributors by updating AUTHORS
-          branch: main
+          branch: production-promotion
